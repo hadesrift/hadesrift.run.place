@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to Hades Rift</h2>
+<p>Your YouTube gaming content and latest updates!</p>
+
+<h3>News</h3>
+<ul>
+    {% for item in news %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Videos</h3>
+<div>
+    {% for video in videos %}
+        <iframe width="300" height="200" src="{{ video }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    {% endfor %}
+</div>
+{% endblock %}
